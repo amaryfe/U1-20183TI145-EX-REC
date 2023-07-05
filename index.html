@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>RECU UNIDAD 1</h1>
+    <br /><br />
+    <h5>Nombre:</h5>
+    <input type="text" id="nombreProducto" />
+    <h5>Cantidad:</h5>
+    <input type="number" id="cantidadProducto" />
+    <h5>Precio:</h5>
+    <input type="number" id="precioProducto" />
+    <button onclick="agregarProductos()">AGREGAR</button>
+    <button onclick="carritoCompra()">CERRAR</button>
+
+    <script>
+      function agregarProductos() {
+        var producto = {
+          nombre: document.getElementById("nombreProducto").value,
+          precioUnitario: document.getElementById("precioProducto").value,
+          cantidad: document.getElementById("cantidadProducto").value,
+
+        };
+        console.log(producto);
+        return producto;
+      }
+
+      function carritoCompra(producto) {
+        var carrito = {
+          productos: [],
+          folio: Math.floor(Math.random() * 10),
+          subtotal,
+          total,
+        };
+        carrito.productos.push(producto);
+        console.log(carrito.producto);
+      }
+    </script>
+  </body>
+</html>
